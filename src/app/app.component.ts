@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'kevin';
   constructor(public test: TestService) { }
   ngOnInit(): void {
+    console.log("newa");
+    
     this.test.test().subscribe( response => {
       console.log(response);
       
