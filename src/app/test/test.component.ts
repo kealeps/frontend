@@ -9,7 +9,7 @@ import { TestService } from './test.service';
 })
 export class TestComponent implements OnInit {
 
-  constructor(private test: TestService) { }
+  constructor(public test: TestService) { }
 
   ngOnInit(): void {
     this.test.test().subscribe( response => {
