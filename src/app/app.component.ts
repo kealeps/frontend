@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TestService } from './test/test.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kevin';
+  constructor(public test: TestService) { }
+  ngOnInit(): void {
+    this.test.test().subscribe( response => {
+      console.log(response);
+      
+    })
+  }
 }
